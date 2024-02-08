@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+![Cover](./.github/cover.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# NLW Expert (React)
 
-Currently, two official plugins are available:
+This application was developed during the Rocketseat's NLW Experts using Vite, React, TypeScript, Tailwind and the SpeechRecognition API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can see the application running [here](https://juliamendesc.github.io/nlw-expert-notes/).
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+If you want to run and play with this application locally, you need to have Node.js installed on your machine. After cloning the repository, access the project folder and run the commands below:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```sh
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go to http://localhost:5173 to see the application.
+
+## Learnings
+
+- Vite
+  This is the first time I used Vite to create a React application. It was a great experience and I loved the speed of the development server. It is also very easy to configure and use.
+
+- SpeechRecognition API
+  I had never used this API before and it was very interesting to learn how to use it. It is very simple to use and it is a great tool to create voice commands in web applications.
+
+## Possible future improvements:
+
+- [ ] Add clear all notes functionality
+- [ ] Add save audio notes functionality
+- [ ] Add edit note functionality
+- [ ] Add delete note functionality
+- [ ] Save notes in web storage
+- [ ] Add tests
+- [ ] Add CI/CD
+- [ ] Add authentication
+
+<br>
+
+Made with ❤️ by [Julia Mendes](https://www.linkedin.com/in/juliamendesc/)
