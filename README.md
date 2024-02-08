@@ -4,7 +4,7 @@
 
 This application was developed during the Rocketseat's NLW Experts using Vite, React, TypeScript, Tailwind and the SpeechRecognition API.
 
-You can see the application running [here](https://juliamendesc.github.io/nlw-expert-notes/).
+You can see the application running [here](https://nlw-expert-notes-beta.vercel.app/).
 
 ## Getting Started
 
