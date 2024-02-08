@@ -36,6 +36,13 @@ export function App() {
 		saveNotesToLocalStorage([newNote, ...notes]);
 	}
 
+	function handleDeleteNote(id: string) {
+		const filteredNotes = notes.filter((note) => note.id !== id);
+
+		setNotes(filteredNotes);
+		saveNotesToLocalStorage(filteredNotes);
+	}
+
 	function handleSearchNotes(event: React.ChangeEvent<HTMLInputElement>) {
 		event.preventDefault();
 
@@ -50,8 +57,14 @@ export function App() {
 			: notes;
 
 	return (
-		<div className='mx-auto max-w-6xl my-12 space-y-6'>
-			<img src={logo} alt='NLW Expert' />
+		<div className='mx-auto max-w-6xl my-12 space-y-6 px-5 relative'>
+			<img
+				src={logo}
+				alt='NLW Expert'
+				className='
+			xl:-rotate-90 xl:absolute xl:top-16 xl:-left-20
+			'
+			/>
 
 			<form className='w-full'>
 				<input
@@ -64,11 +77,15 @@ export function App() {
 
 			<div className='h-px bg-slate-600' />
 
-			<div className='grid grid-cols-3 auto-rows-[250px] gap-6'>
+			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[250px] gap-6'>
 				<NewNoteCard handleAddNote={handleAddNote} />
 
 				{filteredNotes.map((note: Note) => (
-					<NoteCard key={note.id} note={note} />
+					<NoteCard
+						key={note.id}
+						note={note}
+						handleDeleteNote={handleDeleteNote}
+					/>
 				))}
 			</div>
 		</div>
